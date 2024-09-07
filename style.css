@@ -1,0 +1,278 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #3b3b3b;
+    margin-top: 80px;
+}
+
+/* Header */
+header {
+    background: url('background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: rgb(218, 218, 218);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header nav {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #222222;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 5px 3px 3px #222222;
+}
+
+nav ul li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+nav ul li a:hover {
+    color: #f44336;
+}
+
+nav ul li a.active::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.intro {
+    margin-top: 100px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    z-index: 2;
+    font-family: "Nunito", sans-serif;
+}
+
+.intro h2 {
+    font-size: 3rem;
+}
+
+.intro h2 span {
+    color: #f44336;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 10px 30px;
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Section Umum */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Tentang Saya */
+#about p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: "Nunito", sans-serif;
+    color: rgb(170, 170, 170);
+}
+
+#about h2 {
+    color: #f44336;
+}
+
+/* Proyek */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background-color: rgb(112, 112, 112);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Kontak */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-family: "Nunito", sans-serif;
+
+}
+
+form input, form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "Nunito", sans-serif;
+
+}
+
+form button {
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #d32f2f;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+
+}
+
+.garis {
+    width: 80%;
+    margin: 10% auto;
+    background-color: #222222;
+    height: 3px;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: 5px 2px 5px #222222;
+}
+
+.confoto {
+    position: absolute;
+    z-index: 2; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 190px;
+}
+
+.foto {
+    width: 200px; 
+    height: 200px;
+    border-radius: 50%; 
+    border: 5px solid white; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    object-fit: cover;
+}
+
+.social a {
+    margin: 0 25px;
+    font-size: 20px;
+    color:#f44336;
+    text-decoration: none;
+}
+
+.logo {
+    font-family: "Playwrite CU", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #f44336;
+    margin-left: 10px;
+    
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.hub {
+    display: flex;
+    align-items: center;
+    color: #f44336;
+    font-family: "Nunito", sans-serif;
+    justify-content: center;
+}
+
+.hub p {
+    padding: 10px;
+}
